@@ -10,10 +10,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import { NavLink } from 'react-router-dom'
 
 function LayoutsNavbar() {
+  // const navigate = useNavigate()
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
       <Container fluid>
-        <Navbar.Brand as={NavLink} to="/">HomePage</Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/">Home <i className="fa-solid fa-futbol fa-2x" /></Navbar.Brand>
         {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -33,7 +34,7 @@ function LayoutsNavbar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link href="#"><i className="fa-solid fa-circle-user fa-2x" /></Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link>
