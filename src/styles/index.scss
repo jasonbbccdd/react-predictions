@@ -1,7 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-@import "./components/RoundedLogo.scss";
 
-body {
-  background-color: #000000;
-  color: white;
-}
+@import "./app.scss";
+@import "./components/RoundedLogo.scss";
+@import "./components/TournamentsCarousel.scss";

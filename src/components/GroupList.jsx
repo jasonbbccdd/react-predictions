@@ -1,7 +1,7 @@
 import React from 'react'
 import ComposRoundedLogo from '@/components/RoundedLogo'
 
-function ComposGroupCard({ id: groupID, size: groupSize }) {
+function ComposGroupList({ id: groupID }) {
   return (
     <div id={`"group-${groupID}"`} className="group col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-3" data-group-id={groupID}>
       <div className="card bg-transparent border-white">
@@ -53,4 +53,4 @@ function ComposGroupCard({ id: groupID, size: groupSize }) {
   )
 }
 
-export default ComposGroupCard
+export default ComposGroupList

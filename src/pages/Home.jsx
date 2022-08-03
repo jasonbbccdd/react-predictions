@@ -13,3 +13,12 @@ function PagesHome() {
 }
 
 export default PagesHome
+
+// function PagesHomeRouter() {
+//   const { data } = useUserProfile()
+
+//   if (data.preference.home1) return <Navigate to="/home1" />
+//   if (data.preference.home2) return <Navigate to="/home2" />
+
+//   return null
+// }

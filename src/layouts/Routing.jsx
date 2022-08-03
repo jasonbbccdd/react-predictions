@@ -1,22 +1,32 @@
 import React from 'react'
-import { Routes, BrowserRouter, Route } from 'react-router-dom'
+import { Routes, BrowserRouter, Route, Navigate } from 'react-router-dom'
+
+import { AuthProvider } from '@/contexts/Auth'
+import { TournamentsProvider } from '@/contexts/Tournaments'
 
 import App from '@/layouts/App'
 
-import PagesHome from '@/pages/Home'
-import PagesAnother from '@/pages/Another'
 import PagesNotFound from '@/pages/NotFound'
+import PagesTournamentsIndex from '@/pages/tournaments/Index'
+import PagesTournamentsShow from '@/pages/tournaments/Show'
 
 function Routing() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<PagesHome />} />
-          <Route path="/another" element={<PagesAnother />} />
-          <Route path="*" element={<PagesNotFound />} />
-        </Route>
-      </Routes>
+      <AuthProvider>
+        <TournamentsProvider>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Navigate to="/tournaments" replace />} />
+
+              <Route path="/tournaments" element={<PagesTournamentsIndex />} />
+              <Route path="/tournaments/:id" element={<PagesTournamentsShow />} />
+
+              <Route path="*" element={<PagesNotFound />} />
+            </Route>
+          </Routes>
+        </TournamentsProvider>
+      </AuthProvider>
     </BrowserRouter>
   )
 }

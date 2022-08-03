@@ -16,14 +16,17 @@
     "express": "^4.17.3",
     "formik": "^2.2.9",
     "immer": "^9.0.12",
+    "infinite-react-carousel": "^1.2.11",
     "moment": "^2.29.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.0",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
+    "react-loading-skeleton": "^3.1.0",
     "react-rounded-image": "^2.0.14",
     "react-router-dom": "^6.2.2",
+    "react-toastify": "^9.0.7",
     "yup": "^0.32.11"
   },
   "devDependencies": {
